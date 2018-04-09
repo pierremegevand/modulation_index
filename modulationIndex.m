@@ -3,11 +3,11 @@ function [MI,distKL]=modulationIndex(phas,ampl,nBins)
 % function [MI,distKL]=modulationIndex(phas,ampl,nBins)
 %
 % Computes the Modulation Index (MI), a measure of the amount of
-% phase-amplitude coupling between two signals. MI is derived from the
-% Kullbach-Leibner distance, which is the second, optional, output of the
-% function. The third, optional, input to the function is the number of
-% bins in which to discretize phase (default: 18 bins, giving a 20-degree
-% resolution).
+% phase-amplitude coupling between two signals. Phase angles are expected 
+% to be in radians. MI is derived from the Kullbach-Leibner distance, which
+% is the second, optional, output of the function. The third, optional, 
+% input to the function is the number of bins in which to discretize phase 
+% (default: 18 bins, giving a 20-degree resolution).
 %
 % Ref.:
 % Tort AB, Komorowski R, Eichenbaum H, Kopell N. Measuring phase-amplitude
@@ -15,6 +15,12 @@ function [MI,distKL]=modulationIndex(phas,ampl,nBins)
 % Neurophysiol. 2010 Aug;104(2):1195-210. doi: 10.1152/jn.00106.2010. Epub
 % 2010 May 12. Erratum in: J Neurophysiol. 2010 Oct;104(4):2302. PubMed
 % PMID: 20463205; PubMed Central PMCID: PMC2941206.
+%
+% Example:
+%
+%   phas=rand(100,1)*2*pi-pi;
+%   ampl=randn(100,1)*30+100;
+%   [MI,distKL]=modulationIndex(phas,ampl);
 %
 % pierre.megevand@gmail.com
 
