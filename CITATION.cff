@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Mégevand"
+  given-names: "Pierre"
+  orcid: "https://orcid.org/0000-0002-0427-547X"
+title: "Modulation index test for phase-amplitude coupling"
+date-released: 2018-03-02
+url: "https://github.com/pierremegevand/modulation_index"
